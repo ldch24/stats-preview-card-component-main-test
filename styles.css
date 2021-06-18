@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+    --color_one : hsl(233, 47%, 7%);
+    --color_two : hsl(244, 38%, 16%);
+    --color_three : hsl(277, 64%, 61%);
+    --color_four : hsl(0, 0%, 100%);
+    --color_five : hsla(0, 0%, 100%, 0.75);
+    --color_six : hsla(0, 0%, 100%, 0.6);
+
+    --font_one : 'Inter', sans-serif;
+    --font_two : 'Lexend Deca', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    
+}
+
+.workspace {
+    width: 100%;
+    height: 100%;
+    background: var(--color_one);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container{
+    width: 60%;
+    height: 50%;
+    background: var(--color_two);
+    border-radius: 7px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    
+}
+
+.information {
+    width: 50%;
+    float: left;
+    display: flex ;
+    flex: 1.1;
+    flex-flow: column;
+    align-items: stretch;
+}
+
+    .header{
+        width: 100%;
+        display: flex;
+        flex: 1;
+        padding: 5rem 4rem 0 4rem;
+    }
+
+        .header h1{
+            padding: 5px;
+            font-family: var(--font_one);
+            font-size: 2.4rem;
+            color: var(--color_four);
+        }
+
+        .header h1 span{
+            color: var(--color_three);
+        }
+
+    .paragraph {
+        width: 100%;
+        font-family: var(--font_two);
+        color: var(--color_five);
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        padding: 1rem 6rem 0 4rem ;
+        flex: 1;
+
+    }
+
+    .list{
+        width: 100%;
+        display: flex;
+        flex: 1;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+        .box{
+            font-family: var(--font_one);
+            font-size: .75rem;
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            flex: 1;
+            padding: 0rem 1rem 3rem 0rem;
+        }
+
+        .one{
+            padding: 0rem 1rem 3rem 4rem;
+        }
+        .box h1{
+            color: var(--color_four);
+        }
+        .box span{
+            font-family: var(--font_two);
+            color: var(--color_six);
+        }
+
+.image{
+    width: 50%;
+    float:right; 
+    display: flex;
+    flex: 1;
+}
+    .photo{
+        width: 100%;
+        filter: sepia(1) saturate(200%) hue-rotate(225deg) blur(.5px);
+    }
+
+@media all and (max-width: 1300px){
+    .container{
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 1000px){
+    body{
+        font-size: 14px;
+    }
+
+    .header h1{
+        font-size: 2rem;
+    }
+}
+
+@media all and (max-width: 900px){
+    .header h1{
+        font-size: 1.75rem;
+        padding: 2rem 2rem 0 2rem;
+    }
+    .header{
+        padding: 2rem 2rem 0 2rem;
+    }
+}
+
+@media all and (max-width: 500px){
+    .container{
+        height: 40%;
+    }
+}
+
+
+@media all and (max-width: 800px){
+    .container{
+        width: 90%;
+        height: 80%;
+        flex-flow: column-reverse;
+    }
+
+    .image{
+        width: 100%;
+        flex: 1;
+    }
+        .photo{
+            height: 100%;
+        }
+
+    .information{
+        width: 100%;
+        height: auto;
+        flex: 1;
+    }
+        .header{
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+        .header h1,span{
+            font-size: 1.5rem;
+        }
+        .paragraph{
+            text-align: center;
+            padding: 0 2rem;
+        }
+        .paragraph p{
+            font-size: .9rem;
+        }
+    .list{
+        flex-flow: column;
+    }
+        .box{
+            margin: 0;
+            padding: 0;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .one{
+            margin-top: 20px;
+            padding: 0;
+        }
+        .box h1{
+            font-size: 1.25rem;
+        }
+        .box span{
+            margin-top: 5px;
+            font-size: .75rem;
+        }
+    
+}
+
